@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ashtami 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
+body{
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+  overflow:hidden;
+}
+
+.card{
+  background:white;
+  max-width:900px;
+  padding:40px;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+/* title */
+h1{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:25px;
+  background:linear-gradient(90deg,#ff4d6d,#c77dff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* blocks */
+.block{
+  padding:18px;
+  margin:18px 0;
+  border-radius:14px;
+  background:#fff7fb;
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+  line-height:1.8;
+}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}
+.reveal.show{opacity:1;transform:translateY(0)}
+
+.highlight{background:linear-gradient(135deg,#ffe0ec,#f3d9ff);font-weight:600}
+.story{background:#f9f9ff;border-left:6px solid #c77dff}
+.memories{background:#fff4e6;border-left:6px solid #ff922b}
+.wish{background:#e6fcf5;border-left:6px solid #20c997}
+.bold{text-align:center;font-weight:700}
+
+.signature{
+  text-align:right;margin-top:25px;
+  font-weight:bold;font-size:18px;color:#ff4d6d;
+}
+
+button{
+  margin-top:10px;
+  padding:12px 18px;
+  border:none;border-radius:30px;
+  background:#ff4d6d;color:white;
+  cursor:pointer;
+  transition:.2s;
+}
+button:hover{transform:scale(1.05)}
+
+/* cake popup */
+#cakeBox{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.6);
+  display:none; justify-content:center; align-items:center;
+}
+.cake{font-size:120px;animation:bounce 1s infinite alternate}
+@keyframes bounce{to{transform:translateY(-20px)}}
+
+/* beautiful hearts */
+.heart{
+  position:fixed;
+  font-size:22px;
+  animation:heartFloat linear forwards;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.25));
+}
+@keyframes heartFloat{
+  to{transform:translateY(-120vh) scale(1.4) rotate(360deg);opacity:0}
+}
+
+/* beautiful confetti */
+.confetti{
+  position:fixed;
+  width:12px;height:12px;
+  animation:confettiFall linear forwards;
+}
+@keyframes confettiFall{
+  to{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+
+/* sparkles */
+.sparkle{
+  position:fixed;
+  pointer-events:none;
+  font-size:14px;
+  animation:sparkleFade .8s linear forwards;
+}
+@keyframes sparkleFade{
+  to{transform:translateY(-18px) scale(.4);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" autoplay loop>
+<source src="birthday-music.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" style="position:fixed;top:15px;right:15px;z-index:10000;">🔊 Music</button>
+
+<div id="cakeBox" onclick="this.style.display='none'">
+  <div class="cake">🎂</div>
+</div>
+
+<div class="card">
+
+<h1 class="reveal">Hi Ashtami</h1>
+
+<div class="block highlight reveal">Happiest birthday to my bestfriend,twin,bro.</div>
+
+<div class="block reveal">
+Idk how to say these things in front of you thats why I'm writing this, it's easy for me to express this way.
+I can't express what you mean to me nd how much you mean to me you are not just my bestfriend you're more than that always your are my family that person with whom I can share anything doesn't matter what it is personal, family related,academic,overthinking you're kind of safe place to me.
+</div>
+
+<div class="block reveal">
+Everyone will say you today that may god bless you but I think I'm blessed to have you as my bestfriend, I remembered once you said I agree if you never met me than definitely you have much better and good friend than me but I'm trying to be a good friend. If meeting me was bad part of your life then I'm so sorry but for me it was one of the most beautiful part of life.
+</div>
+
+<div class="block story reveal">
+Jab mai pehli din clg aaya tha maine socha nhi tha ki meri itni acchi dost banegi koi mujhe toh laga tha mai wo ladka ban jaaunga jo reel me dikhate hai na ki first sem me bhi wo bada grp nhi hai jo last year aate aate khatam ho jaata hai wo wala ladka par nhi mujhe kuch bahut acche dost mile aur unme se tu sabse khaas hai, mujhe yaad hai tune mujhe insta par request bheji thi toh uss time socha bhi nhi tha yaha tak aa paayenge hum log, we started talking sharing reels but only online class me humari baat nhi hoti thi kyuki mai bahut introvert tha isi beech mai annoying lagne laga tujhe I tried I cried but then I thought jabardasti dost thodi na ban skta hu toh maine bhi chor diya but phir kuch din ke baat honi suru hui uske baad toh acche dost gye started sharing things nd so many things, phir ye rumours ke wajah se phir kuch din hum log dur rahe phir maine bahut saari galtiya ki jisse tujhe bahut hurt hua but maine wo intentionally nhi tha then so many sorry then so many bad things happend like jitne compliments diye the tune, wo sab wapas le liye phir dheere dheere sab thik hona start hua nd I’m so happy ki humare beech sab thik hona start gya now everything is fine.
+</div>
+
+<div class="block memories reveal">
+Inn sab beech humne bahut saara time saath me spend kiya bahut saari memories banayi idk tumhare liye wo memories ki kitni values hai par mere liye toh bahut khaas hai wo sab chote chote memories, badminton khelne jaana, class saath me jaana, unimall ke saamne tera wait karna,saath me roblox khelne mai roblox khelne start bhi tere saath hi kiya tha,saath me khane jaana,gaane sunna saath me unimall se parcel lene jaana, nd all stupid thing which me do together sab memories mere liye bahut khaas hai.
+</div>
+
+<div class="block wish reveal">
+Definitely today is special for you that’s why I’ll pray for you that you get everything whatever you want love, success, tons of money so you can buy so many chips nd shawarma nd so many other things nd hope you will achieve your dreams.
+</div>
+
+<div class="block highlight reveal">
+HAPPY BIRTHDAY ONCE AGAIN TWIN, you matter more than these words bcz i can’t express everything in words that’s why I never want to lose you.
+</div>
+
+<div class="block bold reveal">
+THANK YOU SO MUCH FOR EVERYTHING AND ALSO THANK YOU SO SO SO SO SO SO MUCH FOR BEING MY FRIEND
+</div>
+
+<div class="block reveal">BYE</div>
+<div class="signature reveal">-aryan (your gay creep uncle)</div>
+
+<button onclick="beautifulHearts()">💖 Hearts</button>
+<button onclick="beautifulConfetti()">🎉 Confetti</button>
+<button onclick="showCake()">🎂 Cake</button>
+
+</div>
+
+<script>
+/* reveal on load */
+window.onload = () => {
+  document.querySelectorAll(".reveal").forEach((el,i)=>{
+    setTimeout(()=>el.classList.add("show"), i*900);
+  });
+};
+
+function showCake(){ cakeBox.style.display="flex"; }
+
+function beautifulHearts(){
+  for(let i=0;i<30;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="💖";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(4+Math.random()*3)+"s";
+    h.style.fontSize=(18+Math.random()*22)+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+  }
+}
+
+function beautifulConfetti(){
+  const colors=["#ff4d6d","#ffd43b","#69db7c","#4dabf7","#c77dff","#ffa94d"];
+  for(let i=0;i<160;i++){
+    let c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=colors[Math.floor(Math.random()*colors.length)];
+    c.style.animationDuration=(3+Math.random()*2)+"s";
+    if(Math.random()>.5) c.style.borderRadius="50%";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5000);
+  }
+}
+
+function toggleMusic(){
+  const m=document.getElementById("bgMusic");
+  if(m.paused){m.play()} else {m.pause()}
+}
+
+/* sparkles */
+document.addEventListener("mousemove", e=>{
+  for(let i=0;i<2;i++){
+    let s=document.createElement("div");
+    s.className="sparkle";
+    s.innerHTML="✨";
+    s.style.left=e.clientX+"px";
+    s.style.top=e.clientY+"px";
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),800);
+  }
+});
+</script>
+
+</body>
+</html>
+
