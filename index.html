@@ -14,33 +14,47 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:40px 15px;
+  overflow:hidden;
 }
 
-/* canvas fx layer */
+/* canvas fx */
 #fx{
   position:fixed;
   inset:0;
   pointer-events:none;
-  z-index:5;
+  z-index:1;
 }
 
 /* card */
 .card{
   background:white;
-  max-width:900px;
-  width:100%;
-  padding:30px;
+  width:95%;
+  max-width:850px;
   border-radius:20px;
   box-shadow:0 15px 35px rgba(0,0,0,.18);
-  z-index:10;
+  padding:25px;
+  position:relative;
+  z-index:2;
 }
 
-/* title */
+/* slides */
+.slide{
+  display:none;
+  animation:slideIn .5s ease;
+}
+
+.slide.active{
+  display:block;
+}
+
+@keyframes slideIn{
+  from{opacity:0;transform:translateX(30px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
 h1{
   text-align:center;
-  font-size:34px;
-  margin-bottom:20px;
+  margin-bottom:15px;
   background:linear-gradient(90deg,#ff4d6d,#c77dff);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -49,15 +63,10 @@ h1{
 /* blocks */
 .block{
   padding:16px;
-  margin:14px 0;
   border-radius:12px;
   background:#fff7fb;
   line-height:1.7;
 }
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(18px);transition:.6s}
-.reveal.show{opacity:1;transform:translateY(0)}
 
 .highlight{background:linear-gradient(135deg,#ffe0ec,#f3d9ff);font-weight:600}
 .story{background:#f9f9ff;border-left:5px solid #c77dff}
@@ -67,36 +76,37 @@ h1{
 
 .signature{
   text-align:right;
-  margin-top:20px;
   font-weight:bold;
   color:#ff4d6d;
 }
 
-/* buttons */
+/* nav */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  margin-top:18px;
+}
+
 button{
-  margin:8px 6px 0 0;
   padding:10px 16px;
   border:none;
-  border-radius:24px;
+  border-radius:22px;
   background:#ff4d6d;
   color:white;
   cursor:pointer;
   font-size:14px;
 }
 
-/* cake popup */
+/* cake */
 #cakeBox{
   position:fixed; inset:0;
   background:rgba(0,0,0,.55);
   display:none;
   justify-content:center;
   align-items:center;
-  z-index:20;
+  z-index:5;
 }
-.cake{
-  font-size:110px;
-  animation:bounce 1s infinite alternate;
-}
+.cake{font-size:110px;animation:bounce 1s infinite alternate}
 @keyframes bounce{to{transform:translateY(-15px)}}
 
 /* sparkles */
@@ -105,15 +115,10 @@ button{
   pointer-events:none;
   font-size:14px;
   animation:sparkleFade .7s linear forwards;
-  z-index:30;
+  z-index:6;
 }
 @keyframes sparkleFade{
   to{transform:translateY(-16px) scale(.4);opacity:0}
-}
-
-/* mobile shadow lighter */
-@media(max-width:600px){
-  .card{box-shadow:0 8px 20px rgba(0,0,0,.12);}
 }
 </style>
 </head>
@@ -126,7 +131,7 @@ button{
 <source src="birthday-music.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="toggleMusic()" style="position:fixed;top:10px;right:10px;z-index:40;">🔊 Music</button>
+<button onclick="toggleMusic()" style="position:fixed;top:10px;right:10px;z-index:7;">🔊</button>
 
 <div id="cakeBox" onclick="this.style.display='none'">
   <div class="cake">🎂</div>
@@ -134,130 +139,134 @@ button{
 
 <div class="card">
 
-<h1 class="reveal">Hi Ashtami</h1>
+<!-- SLIDES -->
 
-<div class="block highlight reveal">Happiest birthday to my bestfriend,twin,bro.</div>
+<div class="slide active">
+<h1>Hi Ashtami</h1>
+<div class="block highlight">
+Happiest birthday to my bestfriend,twin,bro.
+</div>
+</div>
 
-<div class="block reveal">
+<div class="slide">
+<div class="block">
 Idk how to say these things in front of you thats why I'm writing this, it's easy for me to express this way.
 I can't express what you mean to me nd how much you mean to me you are not just my bestfriend you're more than that always your are my family that person with whom I can share anything doesn't matter what it is personal, family related,academic,overthinking you're kind of safe place to me.
 </div>
+</div>
 
-<div class="block reveal">
+<div class="slide">
+<div class="block">
 Everyone will say you today that may god bless you but I think I'm blessed to have you as my bestfriend, I remembered once you said I agree if you never met me than definitely you have much better and good friend than me but I'm trying to be a good friend. If meeting me was bad part of your life then I'm so sorry but for me it was one of the most beautiful part of life.
 </div>
-
-<div class="block story reveal">
-Jab mai pehli din clg aaya tha maine socha nhi tha ki meri itni acchi dost banegi koi mujhe toh laga tha mai wo ladka ban jaaunga jo reel me dikhate hai na ki first sem me bhi wo bada grp nhi hai jo last year aate aate khatam ho jaata hai wo wala ladka par nhi mujhe kuch bahut acche dost mile aur unme se tu sabse khaas hai, mujhe yaad hai tune mujhe insta par request bheji thi toh uss time socha bhi nhi tha yaha tak aa paayenge hum log, we started talking sharing reels but only online class me humari baat nhi hoti thi kyuki mai bahut introvert tha isi beech mai annoying lagne laga tujhe I tried I cried but then I thought jabardasti dost thodi na ban skta hu toh maine bhi chor diya but phir kuch din ke baat honi suru hui uske baad toh acche dost gye started sharing things nd so many things, phir ye rumours ke wajah se phir kuch din hum log dur rahe phir maine bahut saari galtiya ki jisse tujhe bahut hurt hua but maine wo intentionally nhi tha then so many sorry then so many bad things happend like jitne compliments diye the tune, wo sab wapas le liye phir dheere dheere sab thik hona start hua nd I’m so happy ki humare beech sab thik hona start gya now everything is fine.
 </div>
 
-<div class="block memories reveal">
-Inn sab beech humne bahut saara time saath me spend kiya bahut saari memories banayi idk tumhare liye wo memories ki kitni values hai par mere liye toh bahut khaas hai wo sab chote chote memories, badminton khelne jaana, class saath me jaana, unimall ke saamne tera wait karna,saath me roblox khelne mai roblox khelne start bhi tere saath hi kiya tha,saath me khane jaana,gaane sunna saath me unimall se parcel lene jaana, nd all stupid thing which me do together sab memories mere liye bahut khaas hai.
+<div class="slide">
+<div class="block story">
+Jab mai pehli din clg aaya tha maine socha nhi tha ki meri itni acchi dost banegi koi mujhe toh laga tha mai wo ladka ban jaaunga jo reel me dikhate hai na ki first sem me bhi wo bada grp nhi hai jo last year aate aate khatam ho jaata hai wo wala ladka par nhi mujhe kuch bahut acche dost mile aur unme se tu sabse khaas hai...
+</div>
 </div>
 
-<div class="block wish reveal">
-Definitely today is special for you that’s why I’ll pray for you that you get everything whatever you want love, success, tons of money so you can buy so many chips nd shawarma nd so many other things nd hope you will achieve your dreams.
+<div class="slide">
+<div class="block memories">
+Inn sab beech humne bahut saara time saath me spend kiya bahut saari memories banayi idk tumhare liye wo memories ki kitni values hai par mere liye toh bahut khaas hai...
+</div>
 </div>
 
-<div class="block highlight reveal">
+<div class="slide">
+<div class="block wish">
+Definitely today is special for you that’s why I’ll pray for you that you get everything whatever you want love, success, tons of money...
+</div>
+</div>
+
+<div class="slide">
+<div class="block highlight">
 HAPPY BIRTHDAY ONCE AGAIN TWIN, you matter more than these words bcz i can’t express everything in words that’s why I never want to lose you.
 </div>
-
-<div class="block bold reveal">
-THANK YOU SO MUCH FOR EVERYTHING AND ALSO THANK YOU SO SO SO SO SO SO MUCH FOR BEING MY FRIEND
 </div>
 
-<div class="block reveal">BYE</div>
-<div class="signature reveal">-aryan (your gay creep uncle)</div>
+<div class="slide">
+<div class="block bold">
+THANK YOU SO MUCH FOR EVERYTHING AND ALSO THANK YOU SO SO SO SO SO SO MUCH FOR BEING MY FRIEND
+</div>
+</div>
 
-<button onclick="burstHearts()">💖 Hearts</button>
-<button onclick="burstConfetti()">🎉 Confetti</button>
-<button onclick="cakeBox.style.display='flex'">🎂 Cake</button>
+<div class="slide">
+<div class="block">BYE</div>
+<div class="signature">-aryan (your gay creep uncle)</div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+<button onclick="prev()">⬅ Prev</button>
+<button onclick="burstConfetti()">🎉</button>
+<button onclick="cakeBox.style.display='flex'">🎂</button>
+<button onclick="next()">Next ➡</button>
+</div>
 
 </div>
 
 <script>
-/* reveal sequence */
-window.onload=()=>{
-  document.querySelectorAll(".reveal").forEach((el,i)=>{
-    setTimeout(()=>el.classList.add("show"), i*800);
-  });
-};
+/* slide logic */
+let i=0;
+const slides=document.querySelectorAll(".slide");
 
-/* music toggle */
+function show(n){
+  slides[i].classList.remove("active");
+  i=(n+slides.length)%slides.length;
+  slides[i].classList.add("active");
+}
+function next(){show(i+1)}
+function prev(){show(i-1)}
+
+/* music */
 function toggleMusic(){
-  const m=bgMusic;
-  m.paused?m.play():m.pause();
+  bgMusic.paused?bgMusic.play():bgMusic.pause();
 }
 
-/* -------- CANVAS PARTICLE ENGINE -------- */
-const canvas=document.getElementById("fx");
-const ctx=canvas.getContext("2d");
-function resize(){canvas.width=innerWidth;canvas.height=innerHeight;}
-resize(); addEventListener("resize",resize);
+/* canvas particles */
+const c=fx,ctx=c.getContext("2d");
+function resize(){c.width=innerWidth;c.height=innerHeight}
+resize(); onresize=resize;
 
-let particles=[];
-
-function burst(x,y,count,colors){
-  for(let i=0;i<count;i++){
-    const a=Math.random()*Math.PI*2;
-    const s=Math.random()*3+2;
-    particles.push({
-      x,y,
-      vx:Math.cos(a)*s,
-      vy:Math.sin(a)*s,
-      life:70+Math.random()*30,
-      color:colors[Math.floor(Math.random()*colors.length)],
-      size:Math.random()*4+2
-    });
+let P=[];
+function burstConfetti(){
+  for(let k=0;k<80;k++){
+    let a=Math.random()*Math.PI*2,s=Math.random()*3+2;
+    P.push({x:innerWidth/2,y:innerHeight/2,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:80,color:["#ff4d6d","#ffd43b","#69db7c","#4dabf7","#c77dff"][Math.floor(Math.random()*5)]});
   }
 }
 
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{
-    p.x+=p.vx;
-    p.y+=p.vy;
-    p.vy+=0.05;
-    p.life--;
-    ctx.globalAlpha=p.life/100;
+function tick(){
+  ctx.clearRect(0,0,c.width,c.height);
+  P.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy; p.vy+=.05; p.life--;
+    ctx.globalAlpha=p.life/80;
     ctx.fillStyle=p.color;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-    ctx.fill();
+    ctx.fillRect(p.x,p.y,6,6);
   });
-  particles=particles.filter(p=>p.life>0);
-  requestAnimationFrame(animate);
+  P=P.filter(p=>p.life>0);
+  requestAnimationFrame(tick);
 }
-animate();
+tick();
 
-function burstConfetti(){
-  burst(innerWidth/2,innerHeight/2,90,
-    ["#ff4d6d","#ffd43b","#69db7c","#4dabf7","#c77dff"]);
-}
-
-function burstHearts(){
-  burst(innerWidth/2,innerHeight/2,60,
-    ["#ff6b6b","#ff8fab","#ffb3c1"]);
-}
-
-/* sparkles (throttled) */
+/* sparkles throttle */
 let cool=false;
-document.addEventListener("mousemove",e=>{
-  if(cool) return; cool=true;
-  let s=document.createElement("div");
-  s.className="sparkle";
-  s.innerHTML="✨";
-  s.style.left=e.clientX+"px";
-  s.style.top=e.clientY+"px";
-  document.body.appendChild(s);
-  setTimeout(()=>s.remove(),700);
-  setTimeout(()=>cool=false,120);
+addEventListener("mousemove",e=>{
+ if(cool) return; cool=true;
+ let s=document.createElement("div");
+ s.className="sparkle"; s.innerHTML="✨";
+ s.style.left=e.clientX+"px"; s.style.top=e.clientY+"px";
+ document.body.appendChild(s);
+ setTimeout(()=>s.remove(),700);
+ setTimeout(()=>cool=false,120);
 });
 </script>
 
 </body>
 </html>
+
+
 
 
 
